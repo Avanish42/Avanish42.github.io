@@ -7,11 +7,12 @@ large-scale ETL/ELT pipelines and lakehouse platforms on Snowflake, PySpark, Pyt
 
 ## What's here
 
-- **`index.html`** — single-page showcase: hero, about, skills, certifications, experience timeline, contact.
-  Self-contained (no build step): all styling is inline, with a certificate lightbox and scroll-reveal in vanilla JS.
+- **`index.html`** — the entire site: a compact, ~2-page web résumé (header, summary, experience,
+  education, certifications, skills). Fully self-contained — inline CSS, a small vanilla-JS certificate
+  lightbox, and no build step or third-party dependencies.
 - **`img/certificates/`** — certificate images (PNG) rendered from the source PDFs in `certificate/`.
 - **`certificate/`** — source résumé PDF and certificate PDFs.
-- **`about.html`** — redirects to `index.html#about` (kept for old inbound links).
+- **`fav.ico`** — favicon.
 
 ## Certifications featured
 
@@ -32,5 +33,5 @@ for await (const page of doc) { /* write page (a PNG Buffer) to img/certificates
 
 ## License
 
-Code released under the [MIT](LICENSE) license. Original layout derived from the Start Bootstrap
-*Creative* theme; the current site is a full rewrite.
+Code released under the [MIT](LICENSE) license. The site is a full rewrite; the earlier Start
+Bootstrap *Creative* template and its assets have been removed.
