@@ -34,16 +34,16 @@
 
     <style>
         :root {
-            --bg: #0b1120;
-            --card: #111c33;
-            --card-2: #16233f;
-            --border: rgba(148, 163, 184, .16);
-            --text: #e8eef8;
-            --muted: #97a6bd;
-            --faint: #64748b;
-            --accent: #38bdf8;
-            --accent-2: #818cf8;
-            --glow: rgba(56, 189, 248, .18);
+            --bg: #dfe6f1;
+            --card: #f4f7fc;
+            --card-2: #e8eef7;
+            --border: rgba(15, 23, 42, .12);
+            --text: #1a2438;
+            --muted: #47566d;
+            --faint: #6b7994;
+            --accent: #0e8fce;
+            --accent-2: #5b62e6;
+            --glow: rgba(14, 143, 206, .22);
         }
 
         * { box-sizing: border-box; }
@@ -57,7 +57,7 @@
             -webkit-font-smoothing: antialiased;
             padding: 26px 18px;
         }
-        body::before, body::after { content: ""; position: fixed; z-index: 0; filter: blur(100px); opacity: .4; border-radius: 50%; pointer-events: none; }
+        body::before, body::after { content: ""; position: fixed; z-index: 0; filter: blur(100px); opacity: .28; border-radius: 50%; pointer-events: none; }
         body::before { width: 440px; height: 440px; top: -170px; right: -110px; background: radial-gradient(circle, var(--accent), transparent 70%); }
         body::after { width: 420px; height: 420px; bottom: -190px; left: -150px; background: radial-gradient(circle, var(--accent-2), transparent 70%); }
 
@@ -68,15 +68,15 @@
         .sheet {
             position: relative; z-index: 1;
             max-width: 1000px; margin: 0 auto;
-            background: linear-gradient(180deg, var(--card), #0e1830);
+            background: linear-gradient(180deg, var(--card), #eaf0f8);
             border: 1px solid var(--border);
             border-radius: 20px;
-            box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .7);
+            box-shadow: 0 30px 70px -34px rgba(30, 41, 59, .28);
             overflow: hidden;
         }
 
         /* ---------- header band ---------- */
-        .head { padding: 26px 32px; border-bottom: 1px solid var(--border); background: linear-gradient(120deg, rgba(56,189,248,.08), rgba(129,140,248,.06)); }
+        .head { padding: 26px 32px; border-bottom: 1px solid var(--border); background: linear-gradient(120deg, rgba(14,143,206,.1), rgba(91,98,230,.08)); }
         .head-top { display: flex; align-items: center; gap: 16px; }
         .badge {
             width: 58px; height: 58px; flex: 0 0 auto; border-radius: 15px; display: grid; place-items: center;
@@ -94,7 +94,7 @@
         /* ---------- body grid ---------- */
         .body { display: grid; grid-template-columns: 1.65fr 1fr; }
         .main { padding: 24px 30px; }
-        .side { padding: 24px 28px; border-left: 1px solid var(--border); background: rgba(255,255,255,.012); }
+        .side { padding: 24px 28px; border-left: 1px solid var(--border); background: rgba(15,23,42,.02); }
 
         .sec { margin-bottom: 22px; }
         .sec:last-child { margin-bottom: 0; }
@@ -152,11 +152,6 @@
         @media (max-width: 780px) {
             .body { grid-template-columns: 1fr; }
             .side { border-left: none; border-top: 1px solid var(--border); }
-        }
-        @media (prefers-color-scheme: light) {
-            :root { --bg: #eef2f9; --card: #ffffff; --card-2: #f1f5fb; --border: rgba(15,23,42,.1); --text: #0f172a; --muted: #475569; --faint: #64748b; --glow: rgba(56,189,248,.22); }
-            .sheet { background: linear-gradient(180deg, #fff, #f7faff); box-shadow: 0 30px 70px -34px rgba(15,23,42,.25); }
-            .head { background: linear-gradient(120deg, rgba(56,189,248,.1), rgba(129,140,248,.08)); }
         }
     </style>
 </head>
