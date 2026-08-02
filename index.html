@@ -15,10 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Avanish Singh Kushwah — Principal Data Engineer & Databricks Certified Generative AI Engineer. 11+ years building large-scale ETL/ELT pipelines on Snowflake, PySpark, Python and cloud.">
+        content="Avanish Singh Kushwah — Principal Data Engineer & Databricks Certified Generative AI Engineer. 11+ years in Snowflake, PySpark, Python and cloud ETL/ELT.">
     <meta name="author" content="Avanish Singh Kushwah">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Avanish Singh Kushwah — Data & AI Engineer">
     <meta property="og:description"
@@ -26,672 +24,270 @@
 
     <link rel="icon" href="fav.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
-
     <title>Avanish Singh Kushwah — Data &amp; AI Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
     <style>
         :root {
             --bg: #0b1120;
-            --bg-soft: #0f172a;
             --card: #111c33;
             --card-2: #16233f;
             --border: rgba(148, 163, 184, .16);
-            --border-strong: rgba(148, 163, 184, .28);
+            --border-strong: rgba(148, 163, 184, .3);
             --text: #e8eef8;
             --muted: #94a3b8;
             --faint: #64748b;
             --accent: #38bdf8;
             --accent-2: #818cf8;
-            --accent-3: #f97316;
             --glow: rgba(56, 189, 248, .18);
-            --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
-            --radius: 18px;
-            --maxw: 1080px;
         }
 
         * { box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-
         body {
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 20px;
             font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.65;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
+        /* background decoration */
+        body::before, body::after {
+            content: ""; position: fixed; z-index: 0; filter: blur(90px); opacity: .45; border-radius: 50%; pointer-events: none;
+        }
+        body::before { width: 460px; height: 460px; top: -160px; right: -100px; background: radial-gradient(circle, var(--accent), transparent 70%); }
+        body::after { width: 420px; height: 420px; bottom: -180px; left: -140px; background: radial-gradient(circle, var(--accent-2), transparent 70%); }
+
         a { color: inherit; text-decoration: none; }
-
-        h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -.02em; }
-
-        ::selection { background: var(--accent); color: #04121f; }
-
-        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-
+        h1, h2, h3 { margin: 0; letter-spacing: -.02em; line-height: 1.15; }
         .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
 
-        /* ---------- Background decoration ---------- */
-        .bg-grid {
-            position: fixed; inset: 0; z-index: -2;
-            background-image:
-                linear-gradient(rgba(148, 163, 184, .04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(148, 163, 184, .04) 1px, transparent 1px);
-            background-size: 44px 44px;
-            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
-        }
-        .bg-blob {
-            position: fixed; z-index: -1; filter: blur(90px); opacity: .5; border-radius: 50%;
-        }
-        .blob-1 { width: 520px; height: 520px; top: -180px; right: -120px; background: radial-gradient(circle, var(--accent), transparent 70%); }
-        .blob-2 { width: 480px; height: 480px; top: 420px; left: -200px; background: radial-gradient(circle, var(--accent-2), transparent 70%); }
-
-        /* ---------- Nav ---------- */
-        header.nav {
-            position: sticky; top: 0; z-index: 50;
-            backdrop-filter: blur(14px);
-            background: rgba(11, 17, 32, .72);
-            border-bottom: 1px solid var(--border);
-        }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.02em; }
-        .brand .dot {
-            width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: #04121f; font-weight: 800; font-size: 15px;
-        }
-        .nav-links { display: flex; gap: 6px; align-items: center; }
-        .nav-links a {
-            color: var(--muted); font-size: 14px; font-weight: 500; padding: 8px 12px; border-radius: 9px;
-            transition: color .2s, background .2s;
-        }
-        .nav-links a:hover { color: var(--text); background: var(--card); }
-        .nav-cta {
-            border: 1px solid var(--border-strong) !important;
-            color: var(--text) !important;
-        }
-        .nav-cta:hover { border-color: var(--accent) !important; }
-        .menu-btn { display: none; background: none; border: 0; color: var(--text); cursor: pointer; }
-
-        /* ---------- Hero ---------- */
-        .hero { padding: 88px 0 64px; }
-        .pill {
-            display: inline-flex; align-items: center; gap: 8px;
-            font-size: 13px; font-weight: 500; color: var(--muted);
-            border: 1px solid var(--border); background: var(--card);
-            padding: 6px 14px; border-radius: 999px; margin-bottom: 26px;
-        }
-        .pill .live { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, .18); }
-        .hero h1 {
-            font-size: clamp(38px, 6.2vw, 68px); font-weight: 800;
-            background: linear-gradient(180deg, #fff, #b6c4dc);
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-        }
-        .hero .role {
-            margin-top: 14px; font-size: clamp(18px, 2.6vw, 24px); font-weight: 600; color: var(--text);
-        }
-        .hero .role .grad {
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-        }
-        .hero p.lead { margin-top: 20px; max-width: 640px; color: var(--muted); font-size: 17px; }
-        .hero-meta { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; color: var(--faint); font-size: 14px; }
-        .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
-        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-        .btn {
-            display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px;
-            padding: 12px 22px; border-radius: 12px; cursor: pointer; transition: transform .15s, box-shadow .2s, background .2s;
-            border: 1px solid transparent;
-        }
-        .btn:hover { transform: translateY(-2px); }
-        .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04121f; box-shadow: 0 12px 30px -10px var(--glow); }
-        .btn-ghost { border-color: var(--border-strong); color: var(--text); background: var(--card); }
-        .btn-ghost:hover { border-color: var(--accent); }
-
-        /* ---------- Stats ---------- */
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
-        .stat {
-            background: linear-gradient(180deg, var(--card), var(--bg-soft));
-            border: 1px solid var(--border); border-radius: var(--radius); padding: 22px;
-        }
-        .stat .num {
-            font-size: 34px; font-weight: 800; letter-spacing: -.03em;
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-        }
-        .stat .lbl { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
-
-        /* ---------- Sections ---------- */
-        section.block { padding: 68px 0; }
-        .sec-head { margin-bottom: 40px; }
-        .sec-kicker { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; }
-        .sec-title { font-size: clamp(26px, 4vw, 38px); font-weight: 800; margin-top: 10px; }
-        .sec-sub { color: var(--muted); margin-top: 12px; max-width: 620px; }
-
-        /* ---------- About ---------- */
-        .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
         .card {
-            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-            padding: 28px; box-shadow: var(--shadow);
+            position: relative; z-index: 1;
+            width: 100%; max-width: 940px;
+            background: linear-gradient(180deg, var(--card), #0e1830);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .7);
+            overflow: hidden;
         }
-        .about-grid p { color: var(--muted); margin: 0 0 16px; }
-        .about-grid p:last-child { margin-bottom: 0; }
-        .highlight { color: var(--text); font-weight: 600; }
-        .quick-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-        .quick-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: 14.5px; }
-        .quick-list .k { color: var(--accent); flex: 0 0 auto; margin-top: 2px; }
-        .quick-list strong { color: var(--text); font-weight: 600; }
 
-        /* ---------- Skills ---------- */
-        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-        .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: border-color .2s, transform .2s; }
-        .skill-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
-        .skill-card h3 { font-size: 16px; display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-        .skill-card .ic { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; background: var(--card-2); border: 1px solid var(--border); }
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag {
-            font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text);
-            background: var(--card-2); border: 1px solid var(--border); padding: 5px 11px; border-radius: 8px;
-            transition: border-color .2s, color .2s;
-        }
-        .tag:hover { border-color: var(--accent); color: var(--accent); }
+        .card-inner { display: grid; grid-template-columns: 1fr 1fr; }
 
-        /* ---------- Certifications ---------- */
-        .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-        .cert {
-            background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-            overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, border-color .2s, box-shadow .2s;
+        /* ---- left / identity ---- */
+        .left { padding: 34px 32px; border-right: 1px solid var(--border); }
+        .idrow { display: flex; align-items: center; gap: 14px; }
+        .badge {
+            width: 56px; height: 56px; flex: 0 0 auto; border-radius: 15px; display: grid; place-items: center;
+            font-weight: 800; font-size: 24px; color: #04121f;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            box-shadow: 0 10px 24px -8px var(--glow);
         }
-        .cert:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 24px 50px -24px var(--glow); }
-        .cert-thumb { position: relative; cursor: zoom-in; background: #f6f4ee; aspect-ratio: 4 / 3.05; overflow: hidden; }
-        .cert-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-        .cert-thumb .zoom {
-            position: absolute; inset: 0; display: grid; place-items: center; opacity: 0;
-            background: rgba(4, 12, 24, .55); color: #fff; font-size: 13px; font-weight: 600; transition: opacity .2s;
-        }
-        .cert-thumb .zoom span { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.6); padding: 8px 14px; border-radius: 10px; }
-        .cert-thumb:hover .zoom { opacity: 1; }
-        .cert-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-        .cert-issuer { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-        .cert-name { font-size: 16px; font-weight: 700; }
-        .cert-meta { margin-top: auto; display: flex; align-items: center; justify-content: space-between; color: var(--faint); font-size: 12.5px; padding-top: 6px; }
-        .cert-badge { display: inline-flex; align-items: center; gap: 6px; color: #22c55e; font-weight: 600; }
+        .name { font-size: 24px; font-weight: 800; }
+        .avail { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); margin-top: 3px; }
+        .avail .live { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.18); }
 
-        /* ---------- Experience timeline ---------- */
-        .timeline { position: relative; margin-left: 8px; }
-        .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); }
-        .job { position: relative; padding: 0 0 34px 40px; }
-        .job:last-child { padding-bottom: 0; }
-        .job .node { position: absolute; left: 0; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
-        .job .node::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--accent); opacity: 0; transition: opacity .2s; }
-        .job:hover .node::after { opacity: 1; }
-        .job-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px; }
-        .job-title { font-size: 17px; font-weight: 700; }
-        .job-company { color: var(--accent-2); font-weight: 600; font-size: 14.5px; }
-        .job-date { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--faint); white-space: nowrap; }
-        .job ul { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-        .job ul li { position: relative; padding-left: 20px; color: var(--muted); font-size: 14.5px; }
-        .job ul li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
-
-        /* ---------- Contact ---------- */
-        .contact-card {
-            background: linear-gradient(135deg, var(--card), var(--card-2));
-            border: 1px solid var(--border-strong); border-radius: 24px; padding: 48px;
-            text-align: center; position: relative; overflow: hidden;
+        .role { margin-top: 20px; font-size: 15.5px; font-weight: 600; }
+        .role .grad {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-        .contact-card::before { content: ""; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 400px; height: 240px; background: radial-gradient(circle, var(--glow), transparent 70%); }
-        .contact-card h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; position: relative; }
-        .contact-card p { color: var(--muted); margin: 14px auto 30px; max-width: 460px; position: relative; }
-        .contact-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; position: relative; }
-        .clink {
-            display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14.5px;
-            background: var(--bg-soft); border: 1px solid var(--border); padding: 12px 18px; border-radius: 12px;
-            transition: border-color .2s, transform .15s, color .2s;
-        }
-        .clink:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+        .meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--faint); font-size: 12.5px; }
+        .summary { margin-top: 16px; color: var(--muted); font-size: 13.5px; }
 
-        footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--faint); font-size: 13.5px; }
-        .foot-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; }
+        .stats { display: flex; gap: 10px; margin-top: 20px; }
+        .stat { flex: 1; background: var(--card-2); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; }
+        .stat .num { font-size: 20px; font-weight: 800; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .stat .lbl { font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: .05em; margin-top: 1px; }
 
-        /* ---------- Lightbox ---------- */
-        .lightbox {
-            position: fixed; inset: 0; z-index: 100; display: none; place-items: center;
-            background: rgba(3, 8, 18, .9); backdrop-filter: blur(6px); padding: 28px;
+        .contact { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+        .cbtn {
+            display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600;
+            padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border);
+            background: var(--card-2); color: var(--text); transition: border-color .2s, color .2s, transform .12s;
         }
+        .cbtn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+        .cbtn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04121f; border-color: transparent; }
+        .cbtn.primary:hover { color: #04121f; }
+        .cbtn svg { width: 15px; height: 15px; }
+
+        /* ---- right / proof ---- */
+        .right { padding: 34px 32px; display: flex; flex-direction: column; gap: 22px; }
+        .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+
+        .certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .cert { border: 1px solid var(--border); border-radius: 11px; overflow: hidden; cursor: zoom-in; background: #f6f4ee; aspect-ratio: 4/3.05; position: relative; transition: transform .18s, border-color .18s; }
+        .cert img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .cert:hover { transform: translateY(-3px); border-color: var(--accent); }
+        .cert .cap { position: absolute; inset: auto 0 0 0; font-size: 9.5px; font-weight: 600; color: #fff; padding: 12px 8px 5px; background: linear-gradient(transparent, rgba(4,12,24,.82)); }
+        .cert-note { margin-top: 9px; font-size: 11.5px; color: var(--faint); }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text); background: var(--card-2); border: 1px solid var(--border); padding: 4px 9px; border-radius: 7px; }
+
+        .role-now { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 13px; }
+        .role-now .co { color: var(--accent-2); font-weight: 600; }
+        .role-now .yr { font-size: 11px; color: var(--faint); white-space: nowrap; }
+        .role-list { margin-top: 8px; display: grid; gap: 6px; }
+        .role-list .r { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--muted); }
+        .role-list .r span:last-child { color: var(--faint); font-size: 11px; white-space: nowrap; }
+
+        /* lightbox */
+        .lightbox { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; background: rgba(3,8,18,.9); backdrop-filter: blur(6px); padding: 24px; }
         .lightbox.open { display: grid; }
-        .lightbox img { max-width: 96vw; max-height: 86vh; border-radius: 12px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.8); }
-        .lightbox .lb-caption { position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; color: #cbd5e1; font-size: 14px; }
-        .lightbox .lb-close { position: absolute; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); color: #fff; font-size: 22px; cursor: pointer; display: grid; place-items: center; }
-        .lightbox .lb-close:hover { background: rgba(255,255,255,.14); }
+        .lightbox img { max-width: 94vw; max-height: 84vh; border-radius: 12px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.8); }
+        .lightbox .cap { position: absolute; bottom: 22px; left: 0; right: 0; text-align: center; color: #cbd5e1; font-size: 13.5px; }
+        .lightbox .close { position: absolute; top: 18px; right: 22px; width: 42px; height: 42px; border-radius: 11px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); color: #fff; font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+        .lightbox .close:hover { background: rgba(255,255,255,.14); }
 
-        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-        .reveal.in { opacity: 1; transform: none; }
-
-        /* ---------- Responsive ---------- */
-        @media (max-width: 860px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .cert-grid { grid-template-columns: repeat(2, 1fr); }
-            .stats { grid-template-columns: repeat(2, 1fr); }
-            .nav-links { display: none; }
-            .menu-btn { display: grid; place-items: center; }
-        }
-        @media (max-width: 560px) {
-            .skills-grid { grid-template-columns: 1fr; }
-            .cert-grid { grid-template-columns: 1fr; }
-            .contact-card { padding: 32px 22px; }
-            .job-date { width: 100%; }
+        @media (max-width: 760px) {
+            body { padding: 18px 14px; }
+            .card-inner { grid-template-columns: 1fr; }
+            .left { border-right: none; border-bottom: 1px solid var(--border); padding: 26px 22px; }
+            .right { padding: 26px 22px; }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { transition: none; opacity: 1; transform: none; }
-            html { scroll-behavior: auto; }
-        }
-
-        /* ---------- Light theme ---------- */
         @media (prefers-color-scheme: light) {
             :root {
-                --bg: #f6f8fc; --bg-soft: #ffffff; --card: #ffffff; --card-2: #eef2f9;
-                --border: rgba(15, 23, 42, .1); --border-strong: rgba(15, 23, 42, .18);
-                --text: #0f172a; --muted: #475569; --faint: #64748b;
-                --glow: rgba(56, 189, 248, .22);
-                --shadow: 0 20px 50px -24px rgba(15, 23, 42, .18);
+                --bg: #eef2f9; --card: #ffffff; --card-2: #f1f5fb;
+                --border: rgba(15,23,42,.1); --border-strong: rgba(15,23,42,.2);
+                --text: #0f172a; --muted: #475569; --faint: #64748b; --glow: rgba(56,189,248,.22);
             }
-            .hero h1 { background: linear-gradient(180deg, #0f172a, #334155); -webkit-background-clip: text; background-clip: text; }
-            header.nav { background: rgba(246, 248, 252, .8); }
-            .btn-primary { color: #04121f; }
+            .card { background: linear-gradient(180deg, #fff, #f6f9ff); box-shadow: 0 30px 70px -34px rgba(15,23,42,.25); }
         }
     </style>
 </head>
 
 <body>
-    <div class="bg-grid"></div>
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
-
-    <!-- Nav -->
-    <header class="nav">
-        <div class="wrap nav-inner">
-            <a class="brand" href="#top">
-                <span class="dot">A</span>
-                <span>Avanish Singh Kushwah</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#certs">Certifications</a>
-                <a href="#experience">Experience</a>
-                <a class="nav-cta" href="#contact">Get in touch</a>
-            </nav>
-            <button class="menu-btn" id="menuBtn" aria-label="Jump to contact" onclick="location.hash='#contact'">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero wrap" id="top">
-        <span class="pill reveal"><span class="live"></span> Available for Data &amp; AI Engineering roles</span>
-        <h1 class="reveal">Avanish Singh<br>Kushwah</h1>
-        <div class="role reveal">Principal <span class="grad">Data Engineer</span> &amp; Databricks Certified <span class="grad">Generative AI Engineer</span></div>
-        <p class="lead reveal">I design and ship large-scale ETL/ELT pipelines, lakehouse platforms and analytics
-            systems — with 11+ years of hands-on depth in Snowflake, PySpark, Python and cloud-native data engineering,
-            now extended into production Generative AI.</p>
-        <div class="hero-meta reveal">
-            <span>📍 Greater Noida, India</span>
-            <span>💼 11+ years experience</span>
-            <span>🎓 Databricks &amp; GATE Certified</span>
-        </div>
-        <div class="cta-row reveal">
-            <a class="btn btn-primary" href="#certs">View certifications
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="certificate/Avanish_Singh_Kushwah_Data_Engineer_07_26 (1).pdf" target="_blank" rel="noopener">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-                Download résumé
-            </a>
-        </div>
-
-        <div class="stats reveal">
-            <div class="stat"><div class="num">11+</div><div class="lbl">Years in data &amp; software</div></div>
-            <div class="stat"><div class="num">3</div><div class="lbl">Professional certifications</div></div>
-            <div class="stat"><div class="num">6</div><div class="lbl">Companies &amp; consultancies</div></div>
-            <div class="stat"><div class="num">50%</div><div class="lbl">Faster Spark ETL delivered</div></div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="block wrap" id="about">
-        <div class="sec-head reveal">
-            <div class="sec-kicker">01 — About</div>
-            <h2 class="sec-title">Turning raw, messy data into governed, decision-ready platforms.</h2>
-        </div>
-        <div class="about-grid">
-            <div class="card reveal">
-                <p><span class="highlight">Data Engineer with 11+ years of experience</span> designing and delivering
-                    large-scale ETL/ELT pipelines, data warehousing and analytics platforms. Deep hands-on expertise in
-                    <span class="highlight">Snowflake, PySpark, Python and SQL</span>, with a strong track record in
-                    cloud-native data engineering, performance tuning and data governance.</p>
-                <p>I build scheduled and event-driven pipelines that integrate diverse sources into governed warehouses
-                    for BI and ML — and I'm now applying that same rigor to <span class="highlight">production
-                    Generative AI</span> as a Databricks Certified Generative AI Engineer Associate.</p>
-                <p>I use AI tools like <span class="highlight">Claude and GitHub Copilot</span> daily to accelerate
-                    development, code review and documentation.</p>
-            </div>
-            <div class="card reveal">
-                <ul class="quick-list">
-                    <li><span class="k mono">›</span><span><strong>Current role</strong> — Principal Data Engineer @ Genpact</span></li>
-                    <li><span class="k mono">›</span><span><strong>Specialties</strong> — Lakehouse, ELT, data governance, GenAI</span></li>
-                    <li><span class="k mono">›</span><span><strong>Clouds</strong> — AWS &amp; Microsoft Azure</span></li>
-                    <li><span class="k mono">›</span><span><strong>Education</strong> — B.E. Computer Science, RGPV Bhopal</span></li>
-                    <li><span class="k mono">›</span><span><strong>Also</strong> — GATE Qualified (CS) &amp; C-DAC DSSD</span></li>
-                    <li><span class="k mono">›</span><span><strong>Languages of choice</strong> — Python &amp; SQL</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="block wrap" id="skills">
-        <div class="sec-head reveal">
-            <div class="sec-kicker">02 — Toolbox</div>
-            <h2 class="sec-title">Technical skills</h2>
-            <p class="sec-sub">The stack I reach for across ingestion, transformation, orchestration and delivery.</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card reveal">
-                <h3><span class="ic">🏔️</span> Data Warehousing &amp; Lakehouse</h3>
-                <div class="tags">
-                    <span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">Delta Lake</span>
-                    <span class="tag">Redshift</span><span class="tag">Data Sharing</span><span class="tag">Perf Tuning</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">⚡</span> Big Data &amp; Processing</h3>
-                <div class="tags">
-                    <span class="tag">PySpark</span><span class="tag">Apache Spark</span><span class="tag">Apache Airflow</span>
-                    <span class="tag">dbt</span><span class="tag">Kafka</span><span class="tag">EMR</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">🔀</span> ETL / Orchestration</h3>
-                <div class="tags">
-                    <span class="tag">Azure Data Factory</span><span class="tag">AWS Glue</span><span class="tag">Step Functions</span>
-                    <span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">EventBridge</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">💻</span> Languages</h3>
-                <div class="tags">
-                    <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/SQL</span>
-                    <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">PHP</span><span class="tag">C</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">☁️</span> Cloud</h3>
-                <div class="tags">
-                    <span class="tag">AWS S3</span><span class="tag">Lambda</span><span class="tag">Glue</span>
-                    <span class="tag">Athena</span><span class="tag">EC2</span><span class="tag">IAM</span>
-                    <span class="tag">Azure Data Factory</span><span class="tag">Blob Storage</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">🗄️</span> Databases &amp; Formats</h3>
-                <div class="tags">
-                    <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">DynamoDB</span>
-                    <span class="tag">Redis</span><span class="tag">Parquet</span><span class="tag">Avro</span><span class="tag">JSON</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">🤖</span> AI &amp; GenAI</h3>
-                <div class="tags">
-                    <span class="tag">Generative AI</span><span class="tag">RAG</span><span class="tag">NLP</span>
-                    <span class="tag">Claude</span><span class="tag">GitHub Copilot</span><span class="tag">ML Models</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <h3><span class="ic">📊</span> BI, Practices &amp; Tools</h3>
-                <div class="tags">
-                    <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Data Governance</span>
-                    <span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Agile/Scrum</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="block wrap" id="certs">
-        <div class="sec-head reveal">
-            <div class="sec-kicker">03 — Credentials</div>
-            <h2 class="sec-title">Certifications</h2>
-            <p class="sec-sub">Verified, current credentials across data engineering and generative AI. Click any
-                certificate to view it full-size.</p>
-        </div>
-        <div class="cert-grid">
-            <figure class="cert reveal" style="margin:0">
-                <div class="cert-thumb" data-full="img/certificates/databricks-data-engineer-associate.png"
-                    data-title="Databricks Certified Data Engineer Associate">
-                    <img src="img/certificates/databricks-data-engineer-associate.png"
-                        alt="Databricks Certified Data Engineer Associate certificate" loading="lazy">
-                    <div class="zoom"><span>🔍 View certificate</span></div>
-                </div>
-                <figcaption class="cert-body">
-                    <div class="cert-issuer">Databricks</div>
-                    <div class="cert-name">Certified Data Engineer Associate</div>
-                    <div class="cert-meta">
-                        <span class="cert-badge">● Valid to Jan 2028</span>
-                        <span class="mono">Issued Jan 2026</span>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <figure class="cert reveal" style="margin:0">
-                <div class="cert-thumb" data-full="img/certificates/databricks-genai-engineer-associate.png"
-                    data-title="Databricks Certified Generative AI Engineer Associate">
-                    <img src="img/certificates/databricks-genai-engineer-associate.png"
-                        alt="Databricks Certified Generative AI Engineer Associate certificate" loading="lazy">
-                    <div class="zoom"><span>🔍 View certificate</span></div>
-                </div>
-                <figcaption class="cert-body">
-                    <div class="cert-issuer">Databricks</div>
-                    <div class="cert-name">Certified Generative AI Engineer Associate</div>
-                    <div class="cert-meta">
-                        <span class="cert-badge">● Valid to Aug 2028</span>
-                        <span class="mono">Issued Aug 2026</span>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <figure class="cert reveal" style="margin:0">
-                <div class="cert-thumb" data-full="img/certificates/anthropic-claude-code-101.png"
-                    data-title="Anthropic — Claude Code 101 Certificate of Completion">
-                    <img src="img/certificates/anthropic-claude-code-101.png"
-                        alt="Anthropic Claude Code 101 certificate of completion" loading="lazy">
-                    <div class="zoom"><span>🔍 View certificate</span></div>
-                </div>
-                <figcaption class="cert-body">
-                    <div class="cert-issuer">Anthropic</div>
-                    <div class="cert-name">Claude Code 101 — Completion</div>
-                    <div class="cert-meta">
-                        <span class="cert-badge">● Completed</span>
-                        <span class="mono">AI-assisted dev</span>
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="block wrap" id="experience">
-        <div class="sec-head reveal">
-            <div class="sec-kicker">04 — Journey</div>
-            <h2 class="sec-title">Professional experience</h2>
-        </div>
-        <div class="timeline">
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
+    <main class="card">
+        <div class="card-inner">
+            <!-- Identity -->
+            <section class="left">
+                <div class="idrow">
+                    <div class="badge">A</div>
                     <div>
-                        <div class="job-title">Principal Data Engineer <span style="color:var(--faint);font-weight:500">(Principal Consultant)</span></div>
-                        <div class="job-company">Genpact, Noida</div>
+                        <h1 class="name">Avanish Singh Kushwah</h1>
+                        <span class="avail"><span class="live"></span> Open to Data &amp; AI Engineering roles</span>
                     </div>
-                    <div class="job-date">Jan 2024 — Present</div>
                 </div>
-                <ul>
-                    <li>Architected and delivered the NSP data platform on a modern cloud stack — ingesting IT/OT and enterprise (SAP) sources into Snowflake via dbt-driven ELT pipelines.</li>
-                    <li>Built scalable PySpark transformation jobs for structured and semi-structured data (JSON, Parquet), applying governance, quality and security best practices across schemas.</li>
-                    <li>Designed scheduled and event-triggered orchestration with monitoring, retry and logging/alerting for production reliability.</li>
-                    <li>Optimized Snowflake SQL and warehouse performance, cutting compute cost and improving throughput; delivered BI in Power BI/Tableau.</li>
-                </ul>
-            </div>
 
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
-                    <div>
-                        <div class="job-title">AWS Data Engineer <span style="color:var(--faint);font-weight:500">(Assistant Consultant)</span></div>
-                        <div class="job-company">Tata Consultancy Services (TCS), Noida</div>
-                    </div>
-                    <div class="job-date">Jan 2023 — Jan 2024</div>
+                <div class="role">Principal <span class="grad">Data Engineer</span> &amp; Databricks Certified <span class="grad">Generative AI Engineer</span></div>
+                <div class="meta">
+                    <span>📍 Greater Noida, India</span>
+                    <span>💼 11+ years</span>
+                    <span>🎓 GATE Qualified (CS)</span>
                 </div>
-                <ul>
-                    <li>Built and maintained ETL/ELT pipelines on AWS (Glue, Lambda, Step Functions, S3); developed Python and PySpark jobs to transform, clean and aggregate large datasets.</li>
-                    <li>Implemented event-driven scheduling and monitoring (EventBridge, CloudWatch) with robust error handling and retries.</li>
-                </ul>
-            </div>
 
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
-                    <div>
-                        <div class="job-title">Senior Data Engineer / Data Scientist</div>
-                        <div class="job-company">Biz2Credit, Noida</div>
-                    </div>
-                    <div class="job-date">Jun 2019 — Dec 2022</div>
-                </div>
-                <ul>
-                    <li>Developed ETL pipelines using Python (AWS Lambda), S3 and Snowflake for fintech/banking data; built ML models using NLP, including document text extraction via AWS services.</li>
-                    <li>Monitored risk scorecards, underwriting and fraud-prevention strategies; created dashboards in Tableau, Intellicus and MySQL.</li>
-                </ul>
-            </div>
+                <p class="summary">I design and ship large-scale ETL/ELT pipelines and lakehouse platforms — deep
+                    hands-on depth in Snowflake, PySpark, Python and cloud, now extended into production Generative AI.</p>
 
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
-                    <div>
-                        <div class="job-title">Senior Software Developer</div>
-                        <div class="job-company">ValueFirst Digital Media, Gurgaon</div>
-                    </div>
-                    <div class="job-date">Sep 2018 — May 2019</div>
+                <div class="stats">
+                    <div class="stat"><div class="num">11+</div><div class="lbl">Years</div></div>
+                    <div class="stat"><div class="num">3</div><div class="lbl">Certs</div></div>
+                    <div class="stat"><div class="num">6</div><div class="lbl">Companies</div></div>
                 </div>
-                <ul>
-                    <li>Led a Scrum team of 5; built Kafka messaging (30% latency reduction) and Spark ETL (50% faster processing).</li>
-                </ul>
-            </div>
 
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
-                    <div>
-                        <div class="job-title">Senior Web Developer</div>
-                        <div class="job-company">Aquad Software, Delhi</div>
-                    </div>
-                    <div class="job-date">Aug 2017 — Sep 2018</div>
+                <div class="contact">
+                    <a class="cbtn primary" href="mailto:avanish9752339909@gmail.com">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M3 5h14v10H3z"/><path d="M3 6l7 5 7-5"/></svg>
+                        Email
+                    </a>
+                    <a class="cbtn" href="https://www.linkedin.com/in/avanish42" target="_blank" rel="noopener">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.3H6.13V17h2.21zM7.23 9.4a1.28 1.28 0 1 0 0-2.56 1.28 1.28 0 0 0 0 2.56zM18 17v-3.67c0-1.96-.42-3.47-2.71-3.47-1.1 0-1.84.6-2.14 1.18h-.03V10.3h-2.12V17h2.21v-3.32c0-.87.17-1.72 1.25-1.72 1.07 0 1.08 1 1.08 1.78V17H18z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a class="cbtn" href="https://github.com/Avanish42" target="_blank" rel="noopener">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+                        GitHub
+                    </a>
+                    <a class="cbtn" href="certificate/Avanish_Singh_Kushwah_Data_Engineer_07_26 (1).pdf" target="_blank" rel="noopener">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12"/></svg>
+                        Résumé
+                    </a>
                 </div>
-                <ul>
-                    <li>Developed web applications and REST APIs; integrated Salesforce, Marketo and Zoom into backend services.</li>
-                </ul>
-            </div>
+            </section>
 
-            <div class="job reveal">
-                <span class="node"></span>
-                <div class="job-top">
-                    <div>
-                        <div class="job-title">Full Stack Web Developer</div>
-                        <div class="job-company">Samyotech Labs Pvt. Ltd., Indore</div>
+            <!-- Proof -->
+            <section class="right">
+                <div>
+                    <div class="eyebrow">Certifications</div>
+                    <div class="certs">
+                        <figure class="cert" style="margin:0" data-full="img/certificates/databricks-data-engineer-associate.png" data-title="Databricks Certified Data Engineer Associate">
+                            <img src="img/certificates/databricks-data-engineer-associate.png" alt="Databricks Certified Data Engineer Associate" loading="lazy">
+                            <figcaption class="cap">Data Engineer Associate</figcaption>
+                        </figure>
+                        <figure class="cert" style="margin:0" data-full="img/certificates/databricks-genai-engineer-associate.png" data-title="Databricks Certified Generative AI Engineer Associate">
+                            <img src="img/certificates/databricks-genai-engineer-associate.png" alt="Databricks Certified Generative AI Engineer Associate" loading="lazy">
+                            <figcaption class="cap">GenAI Engineer Associate</figcaption>
+                        </figure>
+                        <figure class="cert" style="margin:0" data-full="img/certificates/anthropic-claude-code-101.png" data-title="Anthropic — Claude Code 101 Certificate of Completion">
+                            <img src="img/certificates/anthropic-claude-code-101.png" alt="Anthropic Claude Code 101" loading="lazy">
+                            <figcaption class="cap">Claude Code 101</figcaption>
+                        </figure>
                     </div>
-                    <div class="job-date">Dec 2014 — Jul 2017</div>
+                    <div class="cert-note">Databricks (valid to 2028) · Anthropic — click any to view full-size</div>
                 </div>
-                <ul>
-                    <li>Built full-stack web applications, REST APIs, database design and data-integration components.</li>
-                </ul>
-            </div>
+
+                <div>
+                    <div class="eyebrow">Core skills</div>
+                    <div class="tags">
+                        <span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">PySpark</span>
+                        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">dbt</span>
+                        <span class="tag">Airflow</span><span class="tag">AWS</span><span class="tag">Azure ADF</span>
+                        <span class="tag">Kafka</span><span class="tag">GenAI / RAG</span><span class="tag">Power BI</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="eyebrow">Experience</div>
+                    <div class="role-now">
+                        <span><strong>Principal Data Engineer</strong> · <span class="co">Genpact</span></span>
+                        <span class="yr mono">2024 — Now</span>
+                    </div>
+                    <div class="role-list">
+                        <div class="r"><span>AWS Data Engineer · TCS</span><span class="mono">2023–24</span></div>
+                        <div class="r"><span>Sr. Data Engineer / Data Scientist · Biz2Credit</span><span class="mono">2019–22</span></div>
+                        <div class="r"><span>Sr. Software Developer · ValueFirst</span><span class="mono">2018–19</span></div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="block wrap" id="contact">
-        <div class="contact-card reveal">
-            <h2>Let's build something with your data.</h2>
-            <p>Open to Principal / Senior Data Engineering and Generative AI Engineering opportunities. The fastest way to reach me is email or LinkedIn.</p>
-            <div class="contact-links">
-                <a class="clink" href="mailto:avanish9752339909@gmail.com">
-                    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h14v10H3z"/><path d="M3 6l7 5 7-5"/></svg>
-                    avanish9752339909@gmail.com
-                </a>
-                <a class="clink" href="https://www.linkedin.com/in/avanish42" target="_blank" rel="noopener">
-                    <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.3H6.13V17h2.21zM7.23 9.4a1.28 1.28 0 1 0 0-2.56 1.28 1.28 0 0 0 0 2.56zM18 17v-3.67c0-1.96-.42-3.47-2.71-3.47-1.1 0-1.84.6-2.14 1.18h-.03V10.3h-2.12V17h2.21v-3.32c0-.87.17-1.72 1.25-1.72 1.07 0 1.08 1 1.08 1.78V17H18z"/></svg>
-                    linkedin.com/in/avanish42
-                </a>
-                <a class="clink" href="https://github.com/Avanish42" target="_blank" rel="noopener">
-                    <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-                    github.com/Avanish42
-                </a>
-                <a class="clink" href="tel:+919752339909">
-                    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a1 1 0 0 1-1 1A15 15 0 0 1 3 5a1 1 0 0 1 1-1z"/></svg>
-                    +91-97523-39909
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="wrap foot-inner">
-            <span>© <span id="year"></span> Avanish Singh Kushwah — Data &amp; AI Engineer</span>
-            <span class="mono">Built with Snowflake-grade attention to detail.</span>
-        </div>
-    </footer>
+    </main>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
-        <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+        <button class="close" id="lbClose" aria-label="Close">&times;</button>
         <img id="lbImg" src="" alt="">
-        <div class="lb-caption" id="lbCap"></div>
+        <div class="cap" id="lbCap"></div>
     </div>
 
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Certificate lightbox
         const lb = document.getElementById('lightbox');
         const lbImg = document.getElementById('lbImg');
         const lbCap = document.getElementById('lbCap');
-        document.querySelectorAll('.cert-thumb').forEach(t => {
-            t.addEventListener('click', () => {
-                lbImg.src = t.dataset.full;
-                lbImg.alt = t.dataset.title;
-                lbCap.textContent = t.dataset.title;
-                lb.classList.add('open');
-                document.body.style.overflow = 'hidden';
+        document.querySelectorAll('.cert').forEach(c => {
+            c.addEventListener('click', () => {
+                lbImg.src = c.dataset.full; lbImg.alt = c.dataset.title; lbCap.textContent = c.dataset.title;
+                lb.classList.add('open'); document.body.style.overflow = 'hidden';
             });
         });
         function closeLb() { lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
         document.getElementById('lbClose').addEventListener('click', closeLb);
         lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
-
-        // Scroll reveal
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     </script>
 </body>
 
