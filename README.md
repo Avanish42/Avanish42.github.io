@@ -1,27 +1,37 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Creative](http://startbootstrap.com/template-overviews/creative/)
+# Avanish Singh Kushwah — Data & AI Engineer
 
-[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+Personal web résumé and showcase, hosted at **[avanish42.github.io](https://avanish42.github.io)**.
 
-## Getting Started
+Principal Data Engineer & Databricks Certified Generative AI Engineer — 11+ years building
+large-scale ETL/ELT pipelines and lakehouse platforms on Snowflake, PySpark, Python and cloud.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/creative/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-creative.git`
-* Fork the repo
+## What's here
 
-## Bugs and Issues
+- **`index.html`** — the entire site: a compact, ~2-page web résumé (header, summary, experience,
+  education, certifications, skills). Fully self-contained — inline CSS, a small vanilla-JS certificate
+  lightbox, and no build step or third-party dependencies.
+- **`img/certificates/`** — certificate images (PNG) rendered from the source PDFs in `certificate/`.
+- **`certificate/`** — source résumé PDF and certificate PDFs.
+- **`fav.ico`** — favicon.
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-creative/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/creative/).
+## Certifications featured
 
-## Creator
+- Databricks Certified **Data Engineer Associate** (Jan 2026 – Jan 2028)
+- Databricks Certified **Generative AI Engineer Associate** (Aug 2026 – Aug 2028)
+- Anthropic **Claude Code 101** — Certificate of Completion
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## Updating the certificate images
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+The PNGs in `img/certificates/` are generated from the PDFs in `certificate/` using
+[`pdf-to-img`](https://www.npmjs.com/package/pdf-to-img) (Node, no native deps):
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+```js
+import { pdf } from "pdf-to-img";
+const doc = await pdf("certificate/<file>.pdf", { scale: 2.5 });
+for await (const page of doc) { /* write page (a PNG Buffer) to img/certificates/ */ }
+```
 
-## Copyright and License
+## License
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-creative/blob/gh-pages/LICENSE) license.
+Code released under the [MIT](LICENSE) license. The site is a full rewrite; the earlier Start
+Bootstrap *Creative* template and its assets have been removed.

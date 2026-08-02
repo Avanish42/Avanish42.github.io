@@ -2,667 +2,362 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NBDF9T8J');</script>
-    <!-- End Google Tag Manager -->
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB0RW91SE4"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RB0RW91SE4');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RB0RW91SE4');
     </script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="fav.ico" type="image/x-icon"/>
-<link rel="shortcut icon" href="fav.ico" type="image/x-icon"/>
+    <meta name="description"
+        content="Avanish Singh Kushwah — Principal Data Engineer & Databricks Certified Generative AI Engineer. 11+ years in Snowflake, PySpark, Python and cloud ETL/ELT.">
+    <meta name="author" content="Avanish Singh Kushwah">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Avanish Singh Kushwah — Data & AI Engineer">
+    <meta property="og:description"
+        content="Principal Data Engineer & Databricks Certified Generative AI Engineer. Snowflake • PySpark • Python • Cloud ETL/ELT.">
 
-    <title>Portfolio</title>
+    <link rel="icon" href="fav.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
+    <title>Avanish Singh Kushwah — Data &amp; AI Engineer</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <style>
+        :root {
+            --bg: #dfe6f1;
+            --card: #f4f7fc;
+            --card-2: #e8eef7;
+            --border: rgba(15, 23, 42, .12);
+            --text: #1a2438;
+            --muted: #47566d;
+            --faint: #6b7994;
+            --accent: #0e8fce;
+            --accent-2: #5b62e6;
+            --glow: rgba(14, 143, 206, .22);
+        }
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        * { box-sizing: border-box; }
 
-    <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 26px 18px;
+        }
+        body::before, body::after { content: ""; position: fixed; z-index: 0; filter: blur(100px); opacity: .28; border-radius: 50%; pointer-events: none; }
+        body::before { width: 440px; height: 440px; top: -170px; right: -110px; background: radial-gradient(circle, var(--accent), transparent 70%); }
+        body::after { width: 420px; height: 420px; bottom: -190px; left: -150px; background: radial-gradient(circle, var(--accent-2), transparent 70%); }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        a { color: inherit; text-decoration: none; }
+        h1, h2, h3 { margin: 0; letter-spacing: -.01em; line-height: 1.2; }
+        .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
 
+        .sheet {
+            position: relative; z-index: 1;
+            max-width: 1000px; margin: 0 auto;
+            background: linear-gradient(180deg, var(--card), #eaf0f8);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 30px 70px -34px rgba(30, 41, 59, .28);
+            overflow: hidden;
+        }
+
+        /* ---------- header band ---------- */
+        .head { padding: 26px 32px; border-bottom: 1px solid var(--border); background: linear-gradient(120deg, rgba(14,143,206,.1), rgba(91,98,230,.08)); }
+        .head-top { display: flex; align-items: center; gap: 16px; }
+        .badge {
+            width: 58px; height: 58px; flex: 0 0 auto; border-radius: 15px; display: grid; place-items: center;
+            font-weight: 800; font-size: 25px; color: #04121f;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 10px 24px -8px var(--glow);
+        }
+        .name { font-size: 27px; font-weight: 800; }
+        .title { margin-top: 3px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
+        .title .grad { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .head-contact { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px; font-size: 12.5px; color: var(--muted); }
+        .head-contact a, .head-contact span { display: inline-flex; align-items: center; gap: 6px; }
+        .head-contact a:hover { color: var(--accent); }
+        .head-contact svg { width: 14px; height: 14px; opacity: .8; }
+
+        /* ---------- body grid ---------- */
+        .body { display: grid; grid-template-columns: 1.65fr 1fr; }
+        .main { padding: 24px 30px; }
+        .side { padding: 24px 28px; border-left: 1px solid var(--border); background: rgba(15,23,42,.02); }
+
+        .sec { margin-bottom: 22px; }
+        .sec:last-child { margin-bottom: 0; }
+        .sec-h { display: flex; align-items: center; gap: 9px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+        .sec-h::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+        .summary { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+        /* experience */
+        .job { position: relative; padding-left: 18px; padding-bottom: 15px; border-left: 1px solid var(--border); }
+        .job:last-child { padding-bottom: 0; border-left-color: transparent; }
+        .job::before { content: ""; position: absolute; left: -5px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px rgba(56,189,248,.15); }
+        .job-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; }
+        .job-title { font-size: 14.5px; font-weight: 700; }
+        .job-co { font-size: 12.5px; font-weight: 600; color: var(--accent-2); }
+        .job-date { font-size: 11px; color: var(--faint); white-space: nowrap; }
+        .job ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+        .job li { position: relative; padding-left: 15px; font-size: 12.5px; color: var(--muted); }
+        .job li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); font-size: 11px; }
+
+        .edu { font-size: 13px; }
+        .edu strong { font-weight: 700; }
+        .edu .sub { color: var(--faint); font-size: 12px; }
+
+        /* sidebar */
+        .contact-btns { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
+        .cbtn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 7px 11px; border-radius: 9px; border: 1px solid var(--border); background: var(--card-2); transition: border-color .2s, color .2s, transform .12s; }
+        .cbtn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+        .cbtn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04121f; border-color: transparent; }
+        .cbtn svg { width: 14px; height: 14px; }
+
+        .skill-group { margin-bottom: 12px; }
+        .skill-group:last-child { margin-bottom: 0; }
+        .skill-lbl { font-size: 11.5px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+        .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); background: var(--card-2); border: 1px solid var(--border); padding: 3px 8px; border-radius: 6px; }
+
+        .certs { display: grid; gap: 9px; }
+        .cert { display: flex; gap: 11px; align-items: center; border: 1px solid var(--border); border-radius: 11px; padding: 8px; cursor: zoom-in; background: var(--card-2); transition: border-color .18s, transform .14s; }
+        .cert:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .cert-thumb { width: 74px; height: 56px; flex: 0 0 auto; border-radius: 7px; overflow: hidden; background: #f6f4ee; }
+        .cert-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .cert-txt .n { font-size: 12px; font-weight: 700; line-height: 1.25; }
+        .cert-txt .m { font-size: 10.5px; color: var(--faint); margin-top: 2px; }
+        .cert-txt .issuer { color: var(--accent); }
+
+        /* lightbox */
+        .lightbox { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; background: rgba(3,8,18,.9); backdrop-filter: blur(6px); padding: 24px; }
+        .lightbox.open { display: grid; }
+        .lightbox img { max-width: 94vw; max-height: 84vh; border-radius: 12px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.8); }
+        .lightbox .lcap { position: absolute; bottom: 22px; left: 0; right: 0; text-align: center; color: #cbd5e1; font-size: 13.5px; }
+        .lightbox .close { position: absolute; top: 18px; right: 22px; width: 42px; height: 42px; border-radius: 11px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); color: #fff; font-size: 22px; cursor: pointer; display: grid; place-items: center; }
+        .lightbox .close:hover { background: rgba(255,255,255,.14); }
+
+        @media (max-width: 780px) {
+            .body { grid-template-columns: 1fr; }
+            .side { border-left: none; border-top: 1px solid var(--border); }
+        }
+    </style>
 </head>
 
-<body id="page-top">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBDF9T8J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Portfolio </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <!-- <a class="page-scroll" href="#about">About1</a> -->
-                        <a class="page-scroll" href="about.html">About1</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Wordpress</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio1">Java Script</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="#portfolio2">PHP</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio3">Android</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio4">IOS</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading"> HELLO VISITOR123,<br>
-WELCOME TO OUR PORTFOLIO</h1>
-                <hr>
-                <p>We are freelancer in mobile and web app developer which include iOS Android and Web. We Work as a team individual. We have more then 10 year exprience in all the domain.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
-                    <hr class="light">
-                    <p class="text-faded">If you want to implement your idea, then I am always ready for you. Being a professional developer means to understand all the requirements of the clients, and find the best way to implement it with highest quality. I have experience of mobile/web developing more than 5+ years. I have plenty of ability to carry out my work with high quality in time. What i want is good relationship with client and high quality , keep time promise.</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+<body>
+    <main class="sheet">
+        <!-- Header -->
+        <header class="head">
+            <div class="head-top">
+                <div class="badge">A</div>
+                <div>
+                    <h1 class="name">Avanish Singh Kushwah</h1>
+                    <div class="title">Principal <span class="grad">Data Engineer</span> &amp; Databricks Certified <span class="grad">Generative AI Engineer</span></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
+            <div class="head-contact">
+                <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M10 2a6 6 0 0 1 6 6c0 4-6 10-6 10S4 12 4 8a6 6 0 0 1 6-6z"/><circle cx="10" cy="8" r="2"/></svg>Greater Noida, India</span>
+                <a href="tel:+919752339909"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M4 4h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a1 1 0 0 1-1 1A15 15 0 0 1 3 5a1 1 0 0 1 1-1z"/></svg>+91-97523-39909</a>
+                <a href="mailto:avanish9752339909@gmail.com"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M3 5h14v10H3z"/><path d="M3 6l7 5 7-5"/></svg>avanish9752339909@gmail.com</a>
+                <a href="https://www.linkedin.com/in/avanish42" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.3H6.13V17h2.21zM7.23 9.4a1.28 1.28 0 1 0 0-2.56 1.28 1.28 0 0 0 0 2.56zM18 17v-3.67c0-1.96-.42-3.47-2.71-3.47-1.1 0-1.84.6-2.14 1.18h-.03V10.3h-2.12V17h2.21v-3.32c0-.87.17-1.72 1.25-1.72 1.07 0 1.08 1 1.08 1.78V17H18z"/></svg>linkedin.com/in/avanish42</a>
+                <a href="https://github.com/Avanish42" target="_blank" rel="noopener"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49v-1.7c-2.79.62-3.38-1.22-3.38-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>github.com/Avanish42</a>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Portfolio</h3>
-                        <p class="text-muted">Our Portfolio are updated regularly so they don't break.</p>
+        </header>
+
+        <div class="body">
+            <!-- Main column -->
+            <div class="main">
+                <div class="sec">
+                    <div class="sec-h">Professional Summary</div>
+                    <p class="summary">Data Engineer with <strong style="color:var(--text)">11+ years</strong> designing and delivering large-scale ETL/ELT pipelines, data
+                        warehousing and analytics platforms. Deep hands-on expertise in Snowflake, PySpark, Python and SQL,
+                        with a strong track record in cloud-native data engineering, performance tuning and data governance.
+                        Databricks Certified Data Engineer &amp; Generative AI Engineer Associate. Builds scheduled and
+                        event-driven pipelines that integrate diverse sources into governed warehouses for BI and ML, and
+                        uses AI tools (Claude, GitHub Copilot) daily to accelerate development, review and documentation.</p>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Professional Experience</div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Principal Data Engineer</span> · <span class="job-co">Genpact, Noida</span></div>
+                            <span class="job-date">Jan 2024 — Present</span>
+                        </div>
+                        <ul>
+                            <li>Architected and delivered the NSP data platform — ingesting IT/OT and enterprise (SAP) sources into Snowflake via dbt-driven ELT pipelines.</li>
+                            <li>Built scalable PySpark transformation jobs for structured &amp; semi-structured data (JSON, Parquet) with governance, quality and security across schemas.</li>
+                            <li>Designed scheduled &amp; event-triggered orchestration with monitoring, retry and logging/alerting for production reliability.</li>
+                            <li>Optimized Snowflake SQL and warehouse performance, cutting compute cost; delivered BI in Power BI/Tableau.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">AWS Data Engineer</span> · <span class="job-co">Tata Consultancy Services (TCS), Noida</span></div>
+                            <span class="job-date">Jan 2023 — Jan 2024</span>
+                        </div>
+                        <ul>
+                            <li>Built and maintained ETL/ELT pipelines on AWS (Glue, Lambda, Step Functions, S3); Python &amp; PySpark jobs to transform, clean and aggregate large datasets.</li>
+                            <li>Implemented event-driven scheduling and monitoring (EventBridge, CloudWatch) with robust error handling and retries.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Data Engineer / Data Scientist</span> · <span class="job-co">Biz2Credit, Noida</span></div>
+                            <span class="job-date">Jun 2019 — Dec 2022</span>
+                        </div>
+                        <ul>
+                            <li>Developed ETL pipelines using Python (AWS Lambda), S3 and Snowflake for fintech/banking data; built NLP ML models incl. document text extraction via AWS.</li>
+                            <li>Monitored risk scorecards, underwriting and fraud-prevention; created dashboards in Tableau, Intellicus and MySQL.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Software Developer</span> · <span class="job-co">ValueFirst Digital Media, Gurgaon</span></div>
+                            <span class="job-date">Sep 2018 — May 2019</span>
+                        </div>
+                        <ul>
+                            <li>Led a Scrum team of 5; built Kafka messaging (30% latency reduction) and Spark ETL (50% faster processing).</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Web Developer</span> · <span class="job-co">Aquad Software, Delhi</span></div>
+                            <span class="job-date">Aug 2017 — Sep 2018</span>
+                        </div>
+                        <ul>
+                            <li>Developed web applications and REST APIs; integrated Salesforce, Marketo and Zoom into backend services.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Full Stack Web Developer</span> · <span class="job-co">Samyotech Labs Pvt. Ltd., Indore</span></div>
+                            <span class="job-date">Dec 2014 — Jul 2017</span>
+                        </div>
+                        <ul>
+                            <li>Built full-stack web applications, REST APIs, database design and data-integration components.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this Portfolio as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+
+                <div class="sec">
+                    <div class="sec-h">Education</div>
+                    <div class="edu">
+                        <strong>B.E., Computer Science</strong> — Rajiv Gandhi Technical University (RGPV), Bhopal
+                        <div class="sub">2007 — 2011</div>
                     </div>
                 </div>
             </div>
+
+            <!-- Sidebar -->
+            <aside class="side">
+                <div class="contact-btns">
+                    <a class="cbtn primary" href="mailto:avanish9752339909@gmail.com">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M3 5h14v10H3z"/><path d="M3 6l7 5 7-5"/></svg>Email me
+                    </a>
+                    <a class="cbtn" href="certificate/Avanish_Singh_Kushwah_Data_Engineer_07_26 (1).pdf" target="_blank" rel="noopener">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12"/></svg>Résumé PDF
+                    </a>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Certifications</div>
+                    <div class="certs">
+                        <div class="cert" data-full="img/certificates/databricks-data-engineer-associate.png" data-title="Databricks Certified Data Engineer Associate">
+                            <div class="cert-thumb"><img src="img/certificates/databricks-data-engineer-associate.png" alt="Databricks Certified Data Engineer Associate" loading="lazy"></div>
+                            <div class="cert-txt"><div class="n">Certified Data Engineer Associate</div><div class="m"><span class="issuer">Databricks</span> · valid to Jan 2028</div></div>
+                        </div>
+                        <div class="cert" data-full="img/certificates/databricks-genai-engineer-associate.png" data-title="Databricks Certified Generative AI Engineer Associate">
+                            <div class="cert-thumb"><img src="img/certificates/databricks-genai-engineer-associate.png" alt="Databricks Certified Generative AI Engineer Associate" loading="lazy"></div>
+                            <div class="cert-txt"><div class="n">Certified Generative AI Engineer Associate</div><div class="m"><span class="issuer">Databricks</span> · valid to Aug 2028</div></div>
+                        </div>
+                        <div class="cert" data-full="img/certificates/anthropic-claude-code-101.png" data-title="Anthropic — Claude Code 101 Certificate of Completion">
+                            <div class="cert-thumb"><img src="img/certificates/anthropic-claude-code-101.png" alt="Anthropic Claude Code 101" loading="lazy"></div>
+                            <div class="cert-txt"><div class="n">Claude Code 101</div><div class="m"><span class="issuer">Anthropic</span> · completion</div></div>
+                        </div>
+                    </div>
+                    <div class="edu sub" style="margin-top:9px;font-size:11.5px">Also: GATE Qualified — CS (2013–15) · Diploma in System Software Design (DSSD), C-DAC Bangalore (2012)</div>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Technical Skills</div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Warehousing &amp; Lakehouse</div>
+                        <div class="tags"><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">Delta Lake</span><span class="tag">Redshift</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Big Data &amp; Processing</div>
+                        <div class="tags"><span class="tag">PySpark</span><span class="tag">Apache Spark</span><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">Kafka</span><span class="tag">EMR</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">ETL / Orchestration</div>
+                        <div class="tags"><span class="tag">Azure Data Factory</span><span class="tag">AWS Glue</span><span class="tag">Step Functions</span><span class="tag">EventBridge</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Languages</div>
+                        <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">PHP</span><span class="tag">C</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Cloud</div>
+                        <div class="tags"><span class="tag">AWS S3</span><span class="tag">Lambda</span><span class="tag">Athena</span><span class="tag">EC2</span><span class="tag">IAM</span><span class="tag">Azure Blob</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Databases &amp; Formats</div>
+                        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">DynamoDB</span><span class="tag">Redis</span><span class="tag">Parquet</span><span class="tag">Avro</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">AI / GenAI &amp; BI</div>
+                        <div class="tags"><span class="tag">Generative AI</span><span class="tag">RAG</span><span class="tag">NLP</span><span class="tag">Claude</span><span class="tag">Copilot</span><span class="tag">Power BI</span><span class="tag">Tableau</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-lbl">Practices &amp; Tools</div>
+                        <div class="tags"><span class="tag">Data Governance</span><span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Agile/Scrum</span></div>
+                    </div>
+                </div>
+            </aside>
         </div>
-    </section>
+    </main>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button class="close" id="lbClose" aria-label="Close">&times;</button>
+        <img id="lbImg" src="" alt="">
+        <div class="lcap" id="lbCap"></div>
+    </div>
 
-    <section class="no-padding" id="portfolio">
-        <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>WordPress Projects</h2>
-                <!-- <a href="img/Profile.pdf" class="btn btn-default btn-xl sr-button">Download Now!</a> -->
-            </div>
-        </div>
-        </aside>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/BehindBars.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/BehindBars.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Food and Drink
-                                </div>
-                                <div class="project-name">
-                                    Behind Bars
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/clipular2.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/clipular2.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    IT company
-                                </div>
-                                <div class="project-name">
-                                    Samyotech Labs
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/clipular1.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/clipular1.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    North America
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/OrderApps.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/OrderApps.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Food
-                                </div>
-                                <div class="project-name">
-                                    Order App
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/SmartAngle.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/SmartAngle.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Investment
-                                </div>
-                                <div class="project-name">
-                                    Smart Angle
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/wordpress/smartbuy.png" class="portfolio-box">
-                        <img src="img/portfolio/wordpress/smartbuy.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    property
-                                </div>
-                                <div class="project-name">
-                                    Private Property
-                                </div>
-                            </div>
-                        </div>
-                    </a>    
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="no-padding" id="portfolio1">
-        <aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>AngularJs / VueJs</h2>
-                    <!-- <a href="img/Profile.pdf" class="btn btn-default btn-xl sr-button">Download Now!</a> -->
-                </div>
-            </div>
-        </aside>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/angular/Doctor.png" class="portfolio-box">
-                        <img src="img/portfolio/angular/Doctor.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Health And Care
-                                </div>
-                                <div class="project-name">
-                                    Doctor Directory
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/angular/Low.png" class="portfolio-box">
-                        <img src="img/portfolio/angular/Low.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Shopping
-                                </div>
-                                <div class="project-name">
-                                    Price Comperison
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Dummy
-                                </div>
-                                <div class="project-name">
-                                    Dummy
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <section class="no-padding" id="portfolio2">
-        <aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>PHP (Laravel / CodeIgniter)</h2>
-                    <!-- <a href="img/Profile.pdf" class="btn btn-default btn-xl sr-button">Download Now!</a> -->
-                </div>
-            </div>
-        </aside>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/laravel/Auto.png" class="portfolio-box">
-                        <img src="img/portfolio/laravel/Auto.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    Uncle Fitter
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/laravel/Golf.png" class="portfolio-box">
-                        <img src="img/portfolio/laravel/Golf.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    Golf Market
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/laravel/Tour.png" class="portfolio-box">
-                        <img src="img/portfolio/laravel/Tour.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Travel
-                                </div>
-                                <div class="project-name">
-                                    Tour Trip
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="portfolio3">
-        <aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>Android Projects</h2>
-                    <!-- <a href="img/Profile.pdf" class="btn btn-default btn-xl sr-button">Download Now!</a> -->
-                </div>
-            </div>
-        </aside>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/behindbar.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/behindbar.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Food and Drink
-                                </div>
-                                <div class="project-name">
-                                    Behind Bars
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/toi.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/toi.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Food
-                                </div>
-                                <div class="project-name">
-                                    Taste Of indore
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/lowcost.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/lowcost.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Price Comparison
-                                </div>
-                                <div class="project-name">
-                                    Low Cost Plus
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/liceno.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/liceno.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    Liceno App
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/dd.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/dd.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Health Care
-                                </div>
-                                <div class="project-name">
-                                    Doctor Directory
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/Android/inspire.png" class="portfolio-box">
-                        <img src="img/portfolio/Android/inspire.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Education
-                                </div>
-                                <div class="project-name">
-                                    Inspire Quiz
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="portfolio4">
-        <aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>IOS Projects</h2>
-                    <!-- <a href="img/Profile.pdf" class="btn btn-default btn-xl sr-button">Download Now!</a> -->
-                </div>
-            </div>
-        </aside>
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/poochplay.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/poochplay.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Hardware
-                                </div>
-                                <div class="project-name">
-                                    Pooch Play
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/behindbar.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/behindbar.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Food And Drink
-                                </div>
-                                <div class="project-name">
-                                    Behind Bars
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/lowcost.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/lowcost.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Price Comparison
-                                </div>
-                                <div class="project-name">
-                                    Low Cost Plus
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/qr.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/qr.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    QR Scanner
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/short.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/short.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    General
-                                </div>
-                                <div class="project-name">
-                                    Short Tricks
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/IOS/behindbar.png" class="portfolio-box">
-                        <img src="img/portfolio/IOS/behindbar.png" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Travels
-                                </div>
-                                <div class="project-name">
-                                    Behind Bars
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-
-                
-
-               
-                <div class="col-lg-4  text-center">
-                    
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>+91-97523-39909(Web)</p>
-                    <p>+91-79747-02099 (Mobile)</p>
-                    <p>+91-90096-07246 (Project cordinator)</p>
-                </div>
-                <div class="col-lg-4  text-center">
-
-                    <i  class="fa fa-skype fa-3x sr-contact"></i>
-                      <p>  avanish42 (Web)</p>
-                      <p>  akash.sisodia (Mobile)</p>
-                      <p>madhur08@gmail.com (PC)</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:avanish.singh42@gmail.com">Avanish(Web)</a></p>
-                    <p><a  href="mailto:akashsingh.sisodia@icloud.com">Akash(Mobile)</a></p>
-                    <p><a  href="mailto:madhur08@gmail.com">Madhur(PC)</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
-
+    <script>
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lbImg');
+        const lbCap = document.getElementById('lbCap');
+        document.querySelectorAll('.cert').forEach(c => {
+            c.addEventListener('click', () => {
+                lbImg.src = c.dataset.full; lbImg.alt = c.dataset.title; lbCap.textContent = c.dataset.title;
+                lb.classList.add('open'); document.body.style.overflow = 'hidden';
+            });
+        });
+        function closeLb() { lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
+        document.getElementById('lbClose').addEventListener('click', closeLb);
+        lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+    </script>
 </body>
 
 </html>
