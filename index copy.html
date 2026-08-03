@@ -153,31 +153,6 @@
             .body { grid-template-columns: 1fr; }
             .side { border-left: none; border-top: 1px solid var(--border); }
         }
-
-        /* ---------- Animations ---------- */
-        .cert-thumb img { transition: transform .35s ease; }
-        .cert:hover .cert-thumb img { transform: scale(1.06); }
-
-        @keyframes riseIn { from { opacity: 0; transform: translateY(24px) scale(.99); } to { opacity: 1; transform: none; } }
-        @keyframes floatA { to { transform: translate(-34px, 30px) scale(1.05); } }
-        @keyframes floatB { to { transform: translate(30px, -26px) scale(1.06); } }
-        @keyframes badgePop { 0% { opacity: 0; transform: scale(.6) rotate(-8deg); } 60% { transform: scale(1.08) rotate(0); } 100% { opacity: 1; transform: none; } }
-        @keyframes lbPop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .sheet { animation: riseIn .7s cubic-bezier(.2, .75, .25, 1) both; }
-            .badge { animation: badgePop .7s cubic-bezier(.2, .8, .2, 1) .12s both; }
-            body::before { animation: floatA 15s ease-in-out infinite alternate; }
-            body::after { animation: floatB 18s ease-in-out infinite alternate; }
-
-            .reveal { opacity: 0; transform: translateY(18px); }
-            .reveal.in { opacity: 1; transform: none; transition: opacity .55s ease, transform .6s cubic-bezier(.2, .7, .25, 1); }
-
-            .lightbox.open img { animation: lbPop .28s cubic-bezier(.2, .8, .25, 1) both; }
-
-            .cbtn, .cert, .head-contact a, .tag { transition: transform .18s ease, border-color .2s ease, color .2s ease, background .2s ease; }
-            .tag:hover { transform: translateY(-2px); border-color: var(--accent); color: var(--accent); }
-        }
     </style>
 </head>
 
@@ -206,13 +181,16 @@
             <div class="main">
                 <div class="sec">
                     <div class="sec-h">Professional Summary</div>
-                    <p class="summary">AI / Data Engineer with <strong style="color:var(--text)">11+ years</strong> of experience, now focused on building production
-                        Generative AI solutions and agentic workflows on Databricks — spanning LLMs, RAG pipelines, prompt
-                        design, deployment and evaluation on top of governed enterprise data. Databricks Certified Generative
-                        AI Engineer &amp; Data Engineer Associate. Backed by deep hands-on expertise in Snowflake, PySpark,
-                        Python and SQL, with a strong track record in large-scale ETL/ELT, cloud-native data engineering,
-                        performance tuning and data governance. Actively works across the modern GenAI stack (LLMs, LangChain,
-                        Ollama, pytest) and uses AI tools like Claude and GitHub Copilot daily to accelerate delivery.</p>
+                    <p class="summary">AI / Data Engineer with <strong style="color:var(--text)">11+ years</strong> now focused on building
+                    production Generative AI solutions and agentic workflows on Databricks —
+                    spanning LLMs, RAG pipelines, prompt design, deployment and evaluation on
+                    top of governed enterprise data. Databricks Certified Generative AI
+                    Engineer & Data Engineer Associate. Backed by deep hands-on expertise in
+                    Snowflake, PySpark, Python and SQL, with a strong track record in
+                    large-scale ETL/ELT, cloud-native data engineering, performance tuning
+                    and data governance. Actively works across the modern GenAI stack (LLMs,
+                    LangChain, Ollama, pytest) and uses AI tools like Claude and GitHub
+                    Copilot daily to accelerate delivery.</p>
                 </div>
 
                 <div class="sec">
@@ -293,19 +271,9 @@
 
                 <div class="sec">
                     <div class="sec-h">Education</div>
-                    <div class="edu" style="display:grid;gap:9px">
-                        <div>
-                            <strong>B.E., Computer Science</strong> — Rajiv Gandhi Technical University (RGPV), Bhopal
-                            <div class="sub">2007 — 2011</div>
-                        </div>
-                        <div>
-                            <strong>GATE Qualified — Computer Science</strong>
-                            <div class="sub">2013 — 2015</div>
-                        </div>
-                        <div>
-                            <strong>Diploma in System Software Design (DSSD)</strong> — C-DAC, Bangalore
-                            <div class="sub">2012</div>
-                        </div>
+                    <div class="edu">
+                        <strong>B.E., Computer Science</strong> — Rajiv Gandhi Technical University (RGPV), Bhopal
+                        <div class="sub">2007 — 2011</div>
                     </div>
                 </div>
             </div>
@@ -316,8 +284,8 @@
                     <a class="cbtn primary" href="mailto:avanish9752339909@gmail.com">
                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M3 5h14v10H3z"/><path d="M3 6l7 5 7-5"/></svg>Email me
                     </a>
-                    <a class="cbtn" href="certificate/Avanish_Singh_Kushwah_Resume_OnePage.pdf" target="_blank" rel="noopener" download>
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12"/></svg>Resume PDF
+                    <a class="cbtn" href="certificate/Avanish_Singh_Kushwah_Data_Engineer_07_26 (1).pdf" target="_blank" rel="noopener">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12"/></svg>Résumé PDF
                     </a>
                 </div>
 
@@ -337,6 +305,7 @@
                             <div class="cert-txt"><div class="n">Claude Code 101</div><div class="m"><span class="issuer">Anthropic</span> · completion</div></div>
                         </div>
                     </div>
+                    <div class="edu sub" style="margin-top:9px;font-size:11.5px">Also: GATE Qualified — CS (2013–15) · Diploma in System Software Design (DSSD), C-DAC Bangalore (2012)</div>
                 </div>
 
                 <div class="sec">
@@ -403,24 +372,6 @@
         document.getElementById('lbClose').addEventListener('click', closeLb);
         lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
-
-        // Staggered scroll-reveal (skipped when the user prefers reduced motion)
-        if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-            const items = document.querySelectorAll('.sec-h, .summary, .job, .edu, .contact-btns, .cert, .skill-group');
-            items.forEach(el => el.classList.add('reveal'));
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    const el = entry.target;
-                    // stagger items that share a parent so groups cascade in
-                    const sibs = Array.from(el.parentElement.children).filter(n => n.classList.contains('reveal'));
-                    el.style.transitionDelay = (Math.min(sibs.indexOf(el), 6) * 70) + 'ms';
-                    el.classList.add('in');
-                    io.unobserve(el);
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            items.forEach(el => io.observe(el));
-        }
     </script>
 </body>
 

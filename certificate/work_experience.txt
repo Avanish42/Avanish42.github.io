@@ -1,0 +1,108 @@
+========================================================================
+PROFESSIONAL SUMMARY
+========================================================================
+
+AI / Data Engineer with 11+ years of experience, now focused on building
+production Generative AI solutions and agentic workflows on Databricks —
+spanning LLMs, RAG pipelines, prompt design, deployment and evaluation on
+top of governed enterprise data. Databricks Certified Generative AI
+Engineer & Data Engineer Associate. Backed by deep hands-on expertise in
+Snowflake, PySpark, Python and SQL, with a strong track record in
+large-scale ETL/ELT, cloud-native data engineering, performance tuning
+and data governance. Actively works across the modern GenAI stack (LLMs,
+LangChain, Ollama, pytest) and uses AI tools like Claude and GitHub
+Copilot daily to accelerate delivery.
+
+
+========================================================================
+
+========================================================================
+WORK EXPERIENCE
+========================================================================
+
+------------------------------------------------------------------------
+Principal Data Engineer -> AI Developer · Genpact, Noida
+Jan 2024 — Present
+------------------------------------------------------------------------
+- Delivering data engineering and AI solutions for a leading global
+  financial services and investment banking firm, working directly with
+  the client across their enterprise data and AI initiatives.
+- Built scalable data pipelines ingesting enterprise (SAP) and
+  operational sources into Snowflake via dbt-driven ELT, with PySpark
+  transformations for structured and semi-structured data (JSON,
+  Parquet), governance and quality across schemas.
+- Designed scheduled and event-triggered orchestration with monitoring,
+  retry logic and logging/alerting for production reliability, and
+  optimized Snowflake SQL/warehouse performance to cut compute cost.
+- Transitioned into an AI Developer role, building end-to-end Generative
+  AI solutions and AI agents on Databricks using LLMs, the Databricks
+  GenAI stack, Snowflake and pytest for testing and reliability.
+- Developed production-grade agentic workflows — from prompt design and
+  RAG pipelines to deployment, evaluation and monitoring — integrating
+  enterprise data into GenAI applications.
+- Led hands-on R&D and continuous learning across the modern GenAI
+  ecosystem, including LLMs, LangChain, and local model experimentation
+  with Ollama to prototype and evaluate new agent architectures.
+
+------------------------------------------------------------------------
+AWS Data Engineer · Tata Consultancy Services (TCS), Noida
+Jan 2023 — Jan 2024
+------------------------------------------------------------------------
+- Delivered the Green Grass IT/OT data service, ingesting and processing
+  industrial/operational data with a MySQL Server backend for downstream
+  reporting and analytics.
+- Developed end-to-end big data pipelines on AWS using Spark/PySpark,
+  Glue jobs and Step Functions to ingest, transform and aggregate
+  large-scale datasets.
+- Built the ingestion and processing layer with S3, Python, SQS, Kafka,
+  Lambda and dbt, landing curated data into Snowflake.
+- Implemented event-driven scheduling and orchestration with Step
+  Functions, plus robust error handling, retries and monitoring for
+  reliable production runs.
+
+------------------------------------------------------------------------
+Senior Data Engineer · Biz2Credit, Noida
+Jun 2019 — Dec 2022
+------------------------------------------------------------------------
+- Built and maintained data engineering pipelines for a fintech lending
+  platform (small-business loans and financing), using Python (AWS
+  Lambda), S3, Redshift and Snowflake.
+- Owned end-to-end reporting and analytics using Power BI on a Redshift
+  data warehouse, along with Google Analytics reporting and complex SQL
+  queries for business insights.
+- Designed and developed credit risk models using machine learning and
+  deep learning to support underwriting and fraud prevention.
+- Delivered dashboards and self-service reporting across Power BI,
+  Tableau and Intellicus for risk scorecards and business monitoring.
+
+------------------------------------------------------------------------
+Senior Software Developer · ValueFirst Digital Media, Gurgaon
+Sep 2018 — May 2019
+------------------------------------------------------------------------
+- Led a Scrum team of 5, delivering backend and data solutions across
+  multiple projects.
+- Built Kafka-based messaging pipelines (30% latency reduction) and
+  Spark ETL jobs (50% faster processing).
+- Started implementing early machine learning use cases and moved
+  workloads onto AWS cloud infrastructure.
+
+------------------------------------------------------------------------
+Senior Web Developer · Aquad Software, Delhi
+Aug 2017 — Sep 2018
+------------------------------------------------------------------------
+- Delivered backend and API development in Python (Django/Flask) for
+  client projects sourced through freelancing platforms — spanning
+  websites and iOS/Android mobile apps.
+- Built and integrated REST APIs and third-party services (Salesforce,
+  Marketo, Zoom) into backend systems, working directly with clients to
+  ship features across varied domains.
+
+------------------------------------------------------------------------
+Full Stack Developer / Backend Developer · Samyotech Labs Pvt. Ltd., Indore
+Dec 2014 — Jul 2017
+------------------------------------------------------------------------
+- Worked as a backend developer in Python (Django/Flask), building REST
+  APIs and backend services across multiple client projects delivered
+  via freelancing platforms (websites and iOS/Android mobile apps).
+- Led a development team, handling database design, data-integration
+  components and end-to-end delivery for small-business clients.
