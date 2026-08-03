@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Avanish Singh Kushwah — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+
+        :root {
+            --text: #16202f;
+            --muted: #3f4d63;
+            --faint: #6b7994;
+            --accent: #0e6f9e;
+            --accent-2: #4a51c9;
+            --rule: #d3dbe8;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', system-ui, Segoe UI, Roboto, sans-serif;
+            color: var(--text);
+            background: #fff;
+            font-size: 8.5pt;
+            line-height: 1.33;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            padding: 11mm 12mm 9mm;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -.01em; }
+
+        /* ---------- header ---------- */
+        .head { border-bottom: 1.6pt solid var(--accent); padding-bottom: 6px; margin-bottom: 9px; }
+        .name { font-size: 20pt; font-weight: 800; }
+        .role { margin-top: 2px; font-size: 9.6pt; font-weight: 600; color: var(--accent); }
+        .contact { margin-top: 5px; font-size: 8.2pt; color: var(--muted); }
+        .contact span { white-space: nowrap; }
+        .contact .sep { color: var(--rule); margin: 0 6px; }
+        a { color: inherit; text-decoration: none; }
+
+        /* ---------- layout ---------- */
+        .body { display: flex; gap: 9mm; }
+        .main { flex: 1 1 auto; min-width: 0; }
+        .side { flex: 0 0 52mm; }
+
+        .sec { margin-bottom: 8px; }
+        .sec:last-child { margin-bottom: 0; }
+        .sec-h {
+            font-size: 7.6pt; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+            color: var(--accent); border-bottom: .7pt solid var(--rule);
+            padding-bottom: 2.5px; margin-bottom: 5px;
+        }
+
+        .summary { margin: 0; color: var(--muted); text-align: justify; }
+        .summary strong { color: var(--text); font-weight: 700; }
+
+        /* ---------- experience ---------- */
+        .job { margin-bottom: 6.5px; }
+        .job:last-child { margin-bottom: 0; }
+        .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+        .job-title { font-size: 9pt; font-weight: 700; }
+        .job-co { font-weight: 600; color: var(--accent-2); }
+        .job-date { font-size: 7.8pt; color: var(--faint); white-space: nowrap; }
+        ul { margin: 2px 0 0; padding: 0 0 0 11px; list-style: none; }
+        li { position: relative; color: var(--muted); margin-bottom: 1.2px; }
+        li::before { content: "•"; position: absolute; left: -9px; color: var(--accent); }
+
+        /* ---------- education ---------- */
+        .edu-item { margin-bottom: 3.5px; }
+        .edu-item:last-child { margin-bottom: 0; }
+        .edu-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+        .edu-item b { font-weight: 700; }
+        .edu-item .where { color: var(--muted); }
+        .edu-item .yr { font-size: 7.8pt; color: var(--faint); white-space: nowrap; }
+
+        /* ---------- sidebar ---------- */
+        .grp { margin-bottom: 5.5px; }
+        .grp:last-child { margin-bottom: 0; }
+        .grp-l { font-size: 8.2pt; font-weight: 700; margin-bottom: 1px; }
+        .grp-v { color: var(--muted); font-size: 8.2pt; }
+
+        .cert { margin-bottom: 4.5px; }
+        .cert:last-child { margin-bottom: 0; }
+        .cert .n { font-weight: 700; font-size: 8.3pt; }
+        .cert .m { color: var(--faint); font-size: 7.8pt; }
+        .cert .m b { color: var(--accent); font-weight: 600; }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="head">
+            <h1 class="name">Avanish Singh Kushwah</h1>
+            <div class="role">Principal Data Engineer &rarr; AI Developer &middot; Databricks Certified Generative AI Engineer</div>
+            <div class="contact">
+                <span>Greater Noida, India</span><span class="sep">|</span>
+                <span>+91-97523-39909</span><span class="sep">|</span>
+                <span><a href="mailto:avanish9752339909@gmail.com">avanish9752339909@gmail.com</a></span><span class="sep">|</span>
+                <span><a href="https://www.linkedin.com/in/avanish42">linkedin.com/in/avanish42</a></span><span class="sep">|</span>
+                <span><a href="https://github.com/Avanish42">github.com/Avanish42</a></span>
+            </div>
+        </header>
+
+        <div class="body">
+            <div class="main">
+                <div class="sec">
+                    <div class="sec-h">Professional Summary</div>
+                    <p class="summary">AI / Data Engineer with <strong>11+ years</strong> of experience, now focused on building production
+                        Generative AI solutions and agentic workflows on Databricks — LLMs, RAG pipelines, prompt design, deployment
+                        and evaluation on top of governed enterprise data. Databricks Certified Generative AI Engineer &amp; Data
+                        Engineer Associate, backed by deep expertise in Snowflake, PySpark, Python and SQL, with a strong track record
+                        in large-scale ETL/ELT, cloud-native data engineering, performance tuning and data governance.</p>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Professional Experience</div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Principal Data Engineer &rarr; AI Developer</span> &middot; <span class="job-co">Genpact, Noida</span></div>
+                            <span class="job-date">Jan 2024 — Present</span>
+                        </div>
+                        <ul>
+                            <li>Delivering data engineering and AI solutions for a leading global financial services &amp; investment banking client, across their enterprise data and AI initiatives.</li>
+                            <li>Built scalable pipelines ingesting enterprise (SAP) and operational sources into Snowflake via dbt-driven ELT, with PySpark transforms (JSON, Parquet), governance and quality across schemas.</li>
+                            <li>Designed scheduled &amp; event-triggered orchestration with monitoring, retry and alerting; optimized Snowflake SQL/warehouse performance to cut compute cost.</li>
+                            <li>Transitioned into an AI Developer role — building end-to-end GenAI solutions and AI agents on Databricks using LLMs, the Databricks GenAI stack, Snowflake and PyTest.</li>
+                            <li>Developed production-grade agentic workflows — prompt design, RAG pipelines, deployment, evaluation and monitoring; led R&amp;D across LLMs, LangChain and Ollama to prototype new agent architectures.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">AWS Data Engineer</span> &middot; <span class="job-co">Tata Consultancy Services (TCS), Noida</span></div>
+                            <span class="job-date">Jan 2023 — Jan 2024</span>
+                        </div>
+                        <ul>
+                            <li>Delivered the Green Grass IT/OT data service — ingesting and processing industrial/operational data with a MySQL backend for downstream reporting and analytics.</li>
+                            <li>Built end-to-end big data pipelines on AWS with Spark/PySpark, Glue and Step Functions, and an ingestion layer with S3, Python, SQS, Kafka, Lambda and dbt landing curated data into Snowflake.</li>
+                            <li>Implemented event-driven orchestration with error handling, retries and monitoring for reliable production runs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Data Engineer</span> &middot; <span class="job-co">Biz2Credit, Noida</span></div>
+                            <span class="job-date">Jun 2019 — Dec 2022</span>
+                        </div>
+                        <ul>
+                            <li>Built and maintained data pipelines for a fintech lending platform (small-business loans) using Python (AWS Lambda), S3, Redshift and Snowflake.</li>
+                            <li>Owned reporting &amp; analytics with Power BI on a Redshift warehouse, plus Google Analytics and complex SQL for business insights.</li>
+                            <li>Designed credit-risk models with machine learning and deep learning for underwriting and fraud prevention; delivered risk scorecards across Power BI, Tableau and Intellicus.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Software Developer</span> &middot; <span class="job-co">ValueFirst Digital Media, Gurgaon</span></div>
+                            <span class="job-date">Sep 2018 — May 2019</span>
+                        </div>
+                        <ul>
+                            <li>Led a Scrum team of 5; built Kafka messaging pipelines (30% latency reduction) and Spark ETL (50% faster processing), introduced early ML use cases and moved workloads onto AWS.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Senior Web Developer</span> &middot; <span class="job-co">Aquad Software, Delhi</span></div>
+                            <span class="job-date">Aug 2017 — Sep 2018</span>
+                        </div>
+                        <ul>
+                            <li>Backend and API development in Python (Django/Flask) for web and iOS/Android projects; integrated REST APIs and third-party services (Salesforce, Marketo, Zoom).</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-top">
+                            <div><span class="job-title">Full Stack / Backend Developer</span> &middot; <span class="job-co">Samyotech Labs Pvt. Ltd., Indore</span></div>
+                            <span class="job-date">Dec 2014 — Jul 2017</span>
+                        </div>
+                        <ul>
+                            <li>Python (Django/Flask) backend developer building REST APIs and services; led a small team across database design, data integration and end-to-end delivery.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Education</div>
+                    <div class="edu-item">
+                        <div class="edu-top">
+                            <div><b>B.E., Computer Science</b> — <span class="where">Rajiv Gandhi Technical University (RGPV), Bhopal</span></div>
+                            <span class="yr">2007 — 2011</span>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-top">
+                            <div><b>GATE Qualified</b> — <span class="where">Computer Science</span></div>
+                            <span class="yr">2013 — 2015</span>
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-top">
+                            <div><b>Diploma in System Software Design (DSSD)</b> — <span class="where">C-DAC, Bangalore</span></div>
+                            <span class="yr">2012</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="side">
+                <div class="sec">
+                    <div class="sec-h">Certifications</div>
+                    <div class="cert">
+                        <div class="n">Certified Generative AI Engineer Associate</div>
+                        <div class="m"><b>Databricks</b> · valid to Aug 2028</div>
+                    </div>
+                    <div class="cert">
+                        <div class="n">Certified Data Engineer Associate</div>
+                        <div class="m"><b>Databricks</b> · valid to Jan 2028</div>
+                    </div>
+                    <div class="cert">
+                        <div class="n">Claude Code 101</div>
+                        <div class="m"><b>Anthropic</b> · completion</div>
+                    </div>
+                </div>
+
+                <div class="sec">
+                    <div class="sec-h">Technical Skills</div>
+                    <div class="grp">
+                        <div class="grp-l">AI / GenAI</div>
+                        <div class="grp-v">Generative AI, LLMs, AI Agents, RAG, LangChain, Ollama, Databricks GenAI, NLP, Deep Learning, Claude, Copilot</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Warehousing &amp; Lakehouse</div>
+                        <div class="grp-v">Snowflake, Databricks, Delta Lake, Redshift</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Big Data &amp; Processing</div>
+                        <div class="grp-v">PySpark, Apache Spark, Airflow, dbt, Kafka, EMR</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">ETL / Orchestration</div>
+                        <div class="grp-v">Azure Data Factory, AWS Glue, Step Functions, EventBridge</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Languages</div>
+                        <div class="grp-v">Python, SQL, PL/SQL, Pandas, NumPy, PHP, C</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Cloud</div>
+                        <div class="grp-v">AWS S3, Lambda, Athena, EC2, IAM, Azure Blob</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Databases &amp; Formats</div>
+                        <div class="grp-v">PostgreSQL, MySQL, DynamoDB, Redis, Parquet, Avro</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">BI &amp; Analytics</div>
+                        <div class="grp-v">Power BI, Tableau, Intellicus, Google Analytics</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-l">Practices &amp; Tools</div>
+                        <div class="grp-v">Data Governance, CI/CD, Docker, Git, PyTest, Django/Flask, Agile/Scrum</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
