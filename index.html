@@ -79,10 +79,11 @@
         .head { padding: 26px 32px; border-bottom: 1px solid var(--border); background: linear-gradient(120deg, rgba(14,143,206,.1), rgba(91,98,230,.08)); }
         .head-top { display: flex; align-items: center; gap: 16px; }
         .badge {
-            width: 58px; height: 58px; flex: 0 0 auto; border-radius: 15px; display: grid; place-items: center;
-            font-weight: 800; font-size: 25px; color: #04121f;
+            width: 68px; height: 68px; flex: 0 0 auto; border-radius: 17px; padding: 2px;
             background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 10px 24px -8px var(--glow);
         }
+        .badge-in { display: block; width: 100%; height: 100%; border-radius: 15px; overflow: hidden; background: var(--card-2); }
+        .badge img { width: 100%; height: 100%; display: block; object-fit: cover; transform: scale(1.55); transform-origin: 50% 24%; }
         .name { font-size: 27px; font-weight: 800; }
         .title { margin-top: 3px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
         .title .grad { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -186,7 +187,7 @@
         <!-- Header -->
         <header class="head">
             <div class="head-top">
-                <div class="badge">A</div>
+                <div class="badge"><span class="badge-in"><img src="certificate/avanish_profesonal.jpg" alt="Avanish Singh Kushwah"></span></div>
                 <div>
                     <h1 class="name">Avanish Singh Kushwah</h1>
                     <div class="title">Principal <span class="grad">Data Engineer</span> &amp; Databricks Certified <span class="grad">Generative AI Engineer</span></div>
@@ -343,7 +344,7 @@
                     <div class="sec-h">Technical Skills</div>
                     <div class="skill-group">
                         <div class="skill-lbl">AI / GenAI</div>
-                        <div class="tags"><span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">AI Agents</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">Databricks GenAI</span><span class="tag">NLP</span><span class="tag">Deep Learning</span><span class="tag">Claude</span><span class="tag">Copilot</span></div>
+                        <div class="tags"><span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">MCP</span><span class="tag">AI Agents</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">Databricks GenAI</span><span class="tag">NLP</span><span class="tag">Deep Learning</span><span class="tag">Claude</span><span class="tag">Copilot</span></div>
                     </div>
                     <div class="skill-group">
                         <div class="skill-lbl">Warehousing &amp; Lakehouse</div>
@@ -351,7 +352,7 @@
                     </div>
                     <div class="skill-group">
                         <div class="skill-lbl">Big Data &amp; Processing</div>
-                        <div class="tags"><span class="tag">PySpark</span><span class="tag">Apache Spark</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">dbt</span><span class="tag">Kafka</span><span class="tag">EMR</span></div>
+                        <div class="tags"><span class="tag">PySpark</span><span class="tag">Apache Spark</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">DBT</span><span class="tag">Kafka</span><span class="tag">EMR</span></div>
                     </div>
                     <div class="skill-group">
                         <div class="skill-lbl">Languages</div>
@@ -367,7 +368,7 @@
                     </div>
                     <div class="skill-group">
                         <div class="skill-lbl">Databases &amp; Formats</div>
-                        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">DynamoDB</span><span class="tag">Redis</span><span class="tag">Parquet</span><span class="tag">Avro</span></div>
+                        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">pgvector</span><span class="tag">MySQL</span><span class="tag">DynamoDB</span><span class="tag">Redis</span><span class="tag">Parquet</span><span class="tag">Avro</span></div>
                     </div>
                     <div class="skill-group">
                         <div class="skill-lbl">BI &amp; Analytics</div>
