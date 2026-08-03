@@ -1,0 +1,12 @@
+TECHNICAL SKILLS
+
+AI / GenAI: Generative AI, LLMs, AI Agents, RAG, LangChain, Ollama, Databricks GenAI, NLP, Deep Learning, Claude, Copilot
+Warehousing & Lakehouse: Snowflake, Databricks, Delta Lake, Redshift
+Big Data & Processing: PySpark, Apache Spark, Pandas, NumPy, dbt, Kafka, EMR
+Languages: Python, SQL, PL/SQL, JavaScript, PHP, C
+Cloud: AWS S3, Lambda, Athena, EC2, IAM, Azure Blob
+ETL / Orchestration: Airflow, Azure Data Factory, AWS Glue, Step Functions, EventBridge
+Databases & Formats: PostgreSQL, MySQL, DynamoDB, Redis, Parquet, Avro
+BI & Analytics: Power BI, Tableau, Intellicus, Google Analytics
+DevOps & Tools: Data Governance, CI/CD, Docker, Git, PyTest, Agile/Scrum
+Frameworks: FastAPI, Django, Flask
